@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block the_body %}
+
+<p>
+Top Ten Scorers List
+</p>
+
+{% for line in data %}
+
+    <p>{{ line }}</p>
+
+{% endfor %}
+
+<ul>
+        <li><a href="{{ home_url }}">Homepage</a>.
+</ul>
+
+
+{% endblock %}

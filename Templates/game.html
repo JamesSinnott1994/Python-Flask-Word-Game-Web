@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+
+{% block the_body %}
+
+<p> Source word: {{ the_source }} </p>
+
+<p> Try and come up with seven three or more letter words from the source word! </p>
+
+<p>
+Please enter seven words.
+</p>
+
+<form action={{ submit_url }} method="POST">
+
+<p> <input type='hidden' name="source" value= {{ the_source }} </p>
+<p> <input type='hidden' name="time1" value= {{ the_time }} </p>
+
+<p> Word1: <input type=TEXT name="word1"> </p>
+<p> Word2: <input type=TEXT name="word2"> </p>
+<p> Word3: <input type=TEXT name="word3"> </p>
+<p> Word4: <input type=TEXT name="word4"> </p>
+<p> Word5: <input type=TEXT name="word5"> </p>
+<p> Word6: <input type=TEXT name="word6"> </p>
+<p> Word7: <input type=TEXT name="word7"> </p>
+
+<p> <input type="SUBMIT" value="Submit words"> </p>
+
+{% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul>
+            {% for message in messages %}
+                <li>{{ message }}
+            {% endfor %}
+            </ul>
+        {% endif %}
+{% endwith %}
+
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block the_body %}
+
+<p>
+Congratulations!!! You completed the game in {{ the_time }} seconds.
+</p>
+
+<form action={{ submit_url2 }} method="POST">
+
+<p>
+Please enter your name: <input type=TEXT name="user_name">
+</p>
+
+<p> <input type='hidden' name="time2" value= {{ the_time }} </p>
+
+<p> <input type="SUBMIT" value="Submit name"> </p>
+
+{% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul>
+            {% for message in messages %}
+                <li>{{ message }}
+            {% endfor %}
+            </ul>
+        {% endif %}
+{% endwith %}
+
+{% endblock %}

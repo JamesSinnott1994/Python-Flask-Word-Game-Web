@@ -1,0 +1,33 @@
+
+body {
+  font-family:      Verdana, Geneva, Arial, sans-serif;
+  font-size:        medium;
+  background-color: #FFDEAD
+}
+h2 {
+  font-weight:      normal;
+  color:            #8B4513;
+  font-size:        150%;
+}
+
+/* Inputs */
+textarea {
+	width: 600px;
+	height: 120px;
+	border: 3px solid #cccccc;
+	padding: 5px;
+	font-family: Tahoma, sans-serif;
+    font-size:    115%
+}
+
+input[type=text] {
+  font-size:    115%
+}
+
+input[type=submit] {
+  font-size:    125%
+}
+
+select {
+  font-size:    125%
+}
